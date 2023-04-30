@@ -72,7 +72,7 @@ class Spinner:
 
     def update(self):
         symbols = ["|", "/", "-", "\\"]
-        sys.stdout.write(f"\r{symbols[self.counter % len(symbols)]} Validating...")
+        sys.stdout.write(f"\r{colored(symbols[self.counter % len(symbols)], 'magenta')} {colored('Validating...', 'magenta')}")
         sys.stdout.flush()
         self.counter += 1
 
